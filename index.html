@@ -21,6 +21,7 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 
     <!-- Style Sheet -->
@@ -125,7 +126,7 @@
                     <div class="image-ring-outer"></div>
                     <div class="image-ring-inner"></div>
                     <div class="profile-image-container">
-                        <img src="D:\@78\Portfolio\5.jpeg" alt="Muhammad Abdullah" class="profile-img">
+                        <img src="D:\@78\Portfolio\picture no 1.jpeg" alt="Muhammad Abdullah" class="profile-img">
                     </div>
                     <!-- Glassmorphic floating badges -->
                     <div class="floating-badge badge-top-right bounce-slow">
@@ -241,7 +242,7 @@
                 <!-- Project 1: Database Dashboard -->
                 <div class="project-card">
                     <div class="project-image-container">
-                        <img src="D:\@78\Portfolio\7.png" alt="Socket programming " class="project-img">
+                        <img src="D:\@78\Portfolio\picture no 2.png" alt="Socket programming " class="project-img">
                         <div class="project-overlay">
                             <div class="project-tech-tags">
                                 <span>Python</span>
@@ -263,7 +264,7 @@
                 <!-- Project 2: Flight Reservation system -->
                 <div class="project-card">
                     <div class="project-image-container">
-                        <img src="D:\@78\Portfolio\6.png" alt="Flight Reservation system" class="project-img">
+                        <img src="D:\@78\Portfolio\picture no 3.png" alt="Flight Reservation system" class="project-img">
                         <div class="project-overlay">
                             <div class="project-tech-tags">
                                 <span>C++</span>
@@ -293,7 +294,7 @@
                 <div class="connect-glow"></div>
                 <div class="connect-content text-center">
                     <div class="connect-icon-circle">
-                        <img src="D:\@78\Portfolio\10.jpg" alt="Muhammad Abdullah" class="connect-profile-img">
+                        <img src="D:\@78\Portfolio\picture no 4.jpg" alt="Muhammad Abdullah" class="connect-profile-img">
                         <span class="connect-mini-badge"><i data-lucide="linkedin"></i></span>
                     </div>
                     <span class="connect-tag gold-gradient-text">Expand the Network</span>
@@ -326,28 +327,32 @@
                    
                     <h3 class="contact-form-title gold-gradient-text">Send a Message</h3>
                     <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required placeholder=" " class="form-input">
-                            <label for="name" class="form-label">Full Name</label>
-                            <span class="form-underline"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required placeholder=" " class="form-input">
-                            <label for="email" class="form-label">Email Address</label>
-                            <span class="form-underline"></span>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" required placeholder=" " class="form-input"
-                                rows="4"></textarea>
-                            <label for="message" class="form-label">Project Details or Message</label>
-                            <span class="form-underline"></span>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block btn-hover-effect">
-                            <span>Send Message</span>
-                            <i data-lucide="send"></i>
-                        </button>
-                        <p id="form-feedback" class="form-feedback"></p>
-                    </form>
+
+    <div class="form-group">
+        <input type="text" id="name" required placeholder=" " class="form-input">
+        <label for="name" class="form-label">Full Name</label>
+        <span class="form-underline"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="email" id="email" required placeholder=" " class="form-input">
+        <label for="email" class="form-label">Email Address</label>
+        <span class="form-underline"></span>
+    </div>
+
+    <div class="form-group">
+        <textarea id="message" required placeholder=" " class="form-input" rows="4"></textarea>
+        <label for="message" class="form-label">Project Details or Message</label>
+        <span class="form-underline"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block btn-hover-effect">
+        <span id="btn-text">Send Message</span>
+    </button>
+
+    <p id="form-feedback" class="form-feedback"></p>
+
+</form>
                 </div>
 
                 <!-- Right Side: Social Links -->
