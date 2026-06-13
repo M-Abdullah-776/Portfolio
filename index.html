@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Muhammad Abdullah - Software Engineer Portfolio. Specializing in C++, Python, Databases, and luxury web frontend design. Discover projects and get in touch.">
+    <meta name="keywords"
+        content="Muhammad Abdullah, Software Engineer, Portfolio, C++, Python, Database, HTML, CSS, Developer">
+    <meta name="author" content="Muhammad Abdullah">
+    <title>Muhammad Abdullah | Software Engineer</title>
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Outfit:wght@200;300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <!-- Custom Luxury Cursor -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-outline" id="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <span class="logo-text">MA</span>
+            <div class="preloader-bar">
+                <div class="preloader-progress" id="preloader-progress"></div>
+            </div>
+            <span class="loading-label">Loading Craft...</span>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-m">M</span><span class="logo-a">A</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#connect" class="nav-link">Connect</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="https://wa.me/923476978772" target="_blank" class="btn btn-nav btn-hover-effect">
+                    <span>Let's Talk</span>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-container">
+            <!-- Left Side: Introduction Text -->
+            <div class="hero-left fade-in-up">
+                <span class="hero-subtitle gold-gradient-text">Exquisite Digital Craftsmanship</span>
+                <h1 class="hero-title">
+                    <span class="line-1">MUHAMMAD</span>
+                    <span class="line-2 gold-gradient-text">ABDULLAH</span>
+                </h1>
+                <p class="hero-tagline">Software Engineer</p>
+                <p class="hero-desc">
+                    Designing and Developing elegant web solutions with C++, Python, HTML, CSS, JavaScript, and database
+                    systems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary btn-hover-effect">
+                        <span>Explore Portfolio</span>
+                    </a>
+                    <a href="https://github.com/M-Abdullah-776" target="_blank"
+                        class="btn btn-secondary btn-hover-effect">
+                        <i data-lucide="github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/m-abdullah-a239643bb" target="_blank"
+                        class="btn btn-secondary btn-hover-effect">
+                        <i data-lucide="linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+
+                <!-- Micro metrics -->
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <span class="metric-number">C++</span>
+                        <span class="metric-label">Systems & Algorithms</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">Python</span>
+                        <span class="metric-label">Backend & Automation</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">SQL</span>
+                        <span class="metric-label">Database Architecture</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Round Shape Picture -->
+            <div class="hero-right fade-in">
+                <div class="image-wrapper">
+                    <div class="image-bg-glow"></div>
+                    <div class="image-ring-outer"></div>
+                    <div class="image-ring-inner"></div>
+                    <div class="profile-image-container">
+                        <img src="D:\@78\Portfolio\profile1.jpeg" alt="Muhammad Abdullah" class="profile-img">
+                    </div>
+                    <!-- Glassmorphic floating badges -->
+                    <div class="floating-badge badge-top-right bounce-slow">
+                        <div class="badge-icon"><i data-lucide="cpu"></i></div>
+                        <div class="badge-text">
+                            <h4>C++ / Python</h4>
+                            <p>Core Stack</p>
+                        </div>
+                    </div>
+                    <div class="floating-badge badge-bottom-left bounce-slow-delay">
+                        <div class="badge-icon"><i data-lucide="database"></i></div>
+                        <div class="badge-text">
+                            <h4>Database</h4>
+                            <p>Optimized</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle gold-gradient-text">Competencies & Capabilities</span>
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="title-divider"></div>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill Card: C++ -->
+                <div class="skill-card hover-reveal-trigger">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap">
+                            <span class="skill-number">01</span>
+                            <i data-lucide="terminal" class="skill-icon"></i>
+                        </div>
+                        <h3>C++ Development</h3>
+                        <p class="skill-desc">Engineered for absolute performance. Expert in data structures,
+                            object-oriented paradigms, memory management, and high-speed algorithms.</p>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                        <span class="skill-percentage">Advanced Proficiency</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card: Python -->
+                <div class="skill-card hover-reveal-trigger">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap">
+                            <span class="skill-number">02</span>
+                            <i data-lucide="code-2" class="skill-icon"></i>
+                        </div>
+                        <h3>Python Backend</h3>
+                        <p class="skill-desc">Building robust architectures, automation scripts, and server-side
+                            systems. High familiarity with Django, Flask, FastAPI, and data analysis.</p>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                        <span class="skill-percentage">Expert Builder</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card: Database -->
+                <div class="skill-card hover-reveal-trigger">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap">
+                            <span class="skill-number">03</span>
+                            <i data-lucide="database" class="skill-icon"></i>
+                        </div>
+                        <h3>Database Architecture</h3>
+                        <p class="skill-desc">Designing scalable data schemas, query optimization, indexing, and
+                            transactional management in PostgreSQL, MySQL, and MongoDB systems.</p>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                        <span class="skill-percentage">Architect Level</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card: HTML & CSS -->
+                <div class="skill-card hover-reveal-trigger">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap">
+                            <span class="skill-number">04</span>
+                            <i data-lucide="layout" class="skill-icon"></i>
+                        </div>
+                        <h3>HTML5 & CSS3</h3>
+                        <p class="skill-desc">Crafting pixel-perfect, fully responsive, and highly interactive user
+                            interfaces. Specializing in modern flexbox, CSS grid, and bespoke animations.</p>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                        <span class="skill-percentage">Creative Master</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle gold-gradient-text">Curated Engineering Masterpieces</span>
+                <h2 class="section-title">Selected Works</h2>
+                <div class="title-divider"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Database Dashboard -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="D:\@78\Portfolio\profile2.png" alt="Socket programming " class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-tech-tags">
+                                <span>Python</span>
+                                <span>SQL</span>
+                                <span>FastAPI</span>
+                            </div>
+                            <h3 class="project-title">Socket Programming</h3>
+                            <p class="project-desc">A premium dark-mode socket programming dashboard designed for
+                                real-time network communication monitoring, live client-server data exchange analytics,
+                                socket connection tracking, packet flow visualization, and performance bottleneck
+                                detection.</p>
+                            <a href="#contact" class="project-link btn btn-secondary btn-hover-effect">
+                                <span>Inquire Details</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Flight Reservation system -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="D:\@78\Portfolio\profile3.png" alt="Flight Reservation system" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-tech-tags">
+                                <span>C++</span>
+                                <span>Algorithms</span>
+                                <span>SQL</span>
+                            </div>
+                            <h3 class="project-title">Flight Reservation System</h3>
+                            <p class="project-desc">A modern Flight Reservation Management System developed in C++ with
+                                efficient database integration for secure booking, passenger management, ticket
+                                scheduling, and real-time flight tracking. The system features optimized data handling,
+                                user authentication, and an interactive interface designed to simplify airline
+                                operations and enhance user experience.</p>
+                            <a href="#contact" class="project-link btn btn-secondary btn-hover-effect">
+                                <span>Inquire Details</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LinkedIn & Connection Highlight Page Section -->
+    <section id="connect" class="connect-section">
+        <div class="container">
+            <div class="connect-card glass-panel">
+                <div class="connect-glow"></div>
+                <div class="connect-content text-center">
+                    <div class="connect-icon-circle">
+                        <img src="D:\@78\Portfolio\profile4.jpg" alt="Muhammad Abdullah" class="connect-profile-img">
+                        <span class="connect-mini-badge"><i data-lucide="linkedin"></i></span>
+                    </div>
+                    <span class="connect-tag gold-gradient-text">Expand the Network</span>
+                    <h2 class="connect-heading">Connect on LinkedIn</h2>
+                    <p class="connect-text">
+                        Discover my professional milestones, industry engagements, and technological innovations. Let's
+                        exchange insights, share opportunities, and build synergies.
+                    </p>
+                    <a href="https://www.linkedin.com/in/m-abdullah-a239643bb" target="_blank"
+                        class="btn btn-primary btn-hover-effect linkedin-cta-btn">
+                        <span>Visit Profile</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle gold-gradient-text">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="contact-grid">
+                <!-- Left Side: Contact Form -->
+                <div class="contact-form-wrapper">
+                   
+                    <h3 class="contact-form-title gold-gradient-text">Send a Message</h3>
+                    <form id="contact-form" class="contact-form">
+
+    <div class="form-group">
+        <input type="text" id="name" required placeholder=" " class="form-input">
+        <label for="name" class="form-label">Full Name</label>
+        <span class="form-underline"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="email" id="email" required placeholder=" " class="form-input">
+        <label for="email" class="form-label">Email Address</label>
+        <span class="form-underline"></span>
+    </div>
+
+    <div class="form-group">
+        <textarea id="message" required placeholder=" " class="form-input" rows="4"></textarea>
+        <label for="message" class="form-label">Project Details or Message</label>
+        <span class="form-underline"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block btn-hover-effect">
+        <span id="btn-text">Send Message</span>
+    </button>
+
+    <p id="form-feedback" class="form-feedback"></p>
+
+</form>
+                </div>
+
+                <!-- Right Side: Social Links -->
+                <div class="contact-socials-wrapper">
+                    <h3 class="contact-form-title gold-gradient-text">Connect With Me</h3>
+                    <div class="social-links-list">
+                           <a href="https://wa.me/923476978772" target="_blank" class="social-link-card">
+                            <div class="social-link-icon whatsapp-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="social-link-info">
+                                <span class="social-link-name">WhatsApp</span>
+                                <span class="social-link-handle">+92 347 6978772</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="social-link-arrow"></i>
+                        </a>
+                        <a href="mailto:abdullahasadullah776@gmail.com" class="social-link-card">
+                            <div class="social-link-icon email-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="social-link-info">
+                                <span class="social-link-name">Email</span>
+                                <span class="social-link-handle">abdullahasadullah776@gmail.com</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="social-link-arrow"></i>
+                        </a>
+                        <a href="https://github.com/M-Abdullah-776" target="_blank" class="social-link-card">
+                            <div class="social-link-icon github-icon">
+                               <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div class="social-link-info">
+                                <span class="social-link-name">GitHub</span>
+                                <span class="social-link-handle">M-Abdullah-776</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="social-link-arrow"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/m-abdullah-a239643bb" target="_blank" class="social-link-card">
+                            <div class="social-link-icon linkedin-icon">
+                             <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div class="social-link-info">
+                                <span class="social-link-name">LinkedIn</span>
+                                <span class="social-link-handle">Muhammad Abdullah</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="social-link-arrow"></i>
+                        </a>                   
+                        <a href="https://www.instagram.com/abdullah_asadullahh/" target="_blank" class="social-link-card">
+                            <div class="social-link-icon instagram-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="social-link-info">
+                                <span class="social-link-name">Instagram</span>
+                                <span class="social-link-handle">@abdullah_asadullahh</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="social-link-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Muhammad Abdullah. All Rights Reserved. Crafted with Html and CSS.</p>
+            <div class="footer-quick-contact">
+                <a href="tel:+923476978772" class="footer-contact-link" aria-label="Phone">
+                    <i data-lucide="phone"></i>
+                </a>
+                <a href="mailto:abdullahasadullah776@gmail.com" class="footer-contact-link" aria-label="Email">
+                    <i data-lucide="mail"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
