@@ -205,10 +205,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       7. EMAILJS CONTACT FORM
+       7. WEB3FORMS CONTACT FORM
+       — No SDK needed, no OAuth, messages go straight to your Gmail inbox.
+       — Replace YOUR_ACCESS_KEY_HERE with your key from web3forms.com/access
        ========================================================================== */
-
-    emailjs.init("siX7TpZhdzNJCKziC");
 
     const contactForm = document.getElementById("contact-form");
     const feedback = document.getElementById("form-feedback");
@@ -217,71 +217,64 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         let isSubmitting = false;
 
-        contactForm.addEventListener("submit", function(e) {
+        contactForm.addEventListener("submit", async function (e) {
 
             e.preventDefault();
 
-            // Prevent double submission
             if (isSubmitting) return;
             isSubmitting = true;
 
-            btnText.textContent = "Sending...";
             const submitBtn = contactForm.querySelector('button[type="submit"]');
+            btnText.textContent = "Sending...";
             submitBtn.disabled = true;
 
-           const templateParams = {
+            const formData = {
+                access_key: "26262f26-09db-4ef0-a1a3-d7084aad19a0",
+                name: document.getElementById("name").value.trim(),
+                email: document.getElementById("email").value.trim(),
+                message: document.getElementById("message").value.trim(),
+                subject: "New Portfolio Message from " + document.getElementById("name").value.trim(),
+            };
 
-                  name: document.getElementById("name").value,
-                  email: document.getElementById("email").value,
-                  message: document.getElementById("message").value,
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
 
-                };
+                const result = await response.json();
 
-            emailjs.send(
-                "service_ygm5yyq",
-                "template_gqa6y4h",
-                templateParams
-            )
+                if (result.success) {
+                    feedback.className = "form-feedback success";
+                    feedback.textContent = "Message sent successfully!";
+                    btnText.textContent = "Message Sent";
+                    contactForm.reset();
 
-            .then(function() {
+                    setTimeout(() => {
+                        btnText.textContent = "Send Message";
+                        feedback.textContent = "";
+                        feedback.className = "form-feedback";
+                    }, 4000);
 
-                feedback.className = "form-feedback success";
+                } else {
+                    throw new Error(result.message || "Submission failed");
+                }
 
-                feedback.textContent =
-                    "Message sent successfully!";
-
-                btnText.textContent = "Message Sent";
-
-                contactForm.reset();
-                isSubmitting = false;
-                submitBtn.disabled = false;
-
-                setTimeout(() => {
-
-                    btnText.textContent = "Send Message";
-                    feedback.textContent = "";
-
-                }, 4000);
-
-            })
-
-            .catch(function(error) {
-
+            } catch (error) {
                 feedback.className = "form-feedback error";
-
-                feedback.textContent =
-                    "Failed to send message.";
-
+                feedback.textContent = "Failed to send. Please email me directly.";
                 btnText.textContent = "Send Message";
-                isSubmitting = false;
-                submitBtn.disabled = false;
+                console.error("Web3Forms error:", error);
+            }
 
-                console.log(error);
-
-            });
+            isSubmitting = false;
+            submitBtn.disabled = false;
 
         });
-
     }
 
 });
