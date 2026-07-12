@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resume - Muhammad Abdullah">
+    <title>Resume | Muhammad Abdullah</title>
+
+    <!-- Reuse site fonts, icons and stylesheet for consistent look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Outfit:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!-- Header (same as homepage for consistent navigation) -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-m">M</span><span class="logo-a">A</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html#hero" class="nav-link">Home</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#connect" class="nav-link">Connect</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="https://wa.me/923476978772" target="_blank" class="btn btn-nav btn-hover-effect">
+                    <span>Let's Talk</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Resume Hero -->
+    <section class="hero-section" style="padding: 3.5rem 0;">
+        <div class="container hero-container">
+            <div class="hero-left fade-in-up">
+                <span class="hero-subtitle gold-gradient-text">Professional Resume</span>
+                <h1 class="hero-title"><span class="line-1">MUHAMMAD</span> <span class="line-2 gold-gradient-text">ABDULLAH</span></h1>
+                <p class="hero-tagline">Software Engineer — C++, Python, Databases, Web</p>
+                <p class="hero-desc">Below is a concise, professional presentation of experience, skills, and education. Use the buttons to download or view the full resume document.</p>
+
+                <div class="hero-buttons" style="margin-top:1.25rem;">
+                    <a href="Resume.docx" download class="btn btn-primary btn-hover-effect">
+                        <span>Download Resume</span>
+                    </a>
+                    <a href="#view-resume" class="btn btn-secondary btn-hover-effect">
+                        <span>View Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- View Resume (HTML) -->
+    <section id="view-resume" class="projects-section" style="padding-bottom:3rem;">
+        <div class="container">
+            <div class="section-header text-left">
+                <span class="section-subtitle gold-gradient-text">Career Summary</span>
+                <h2 class="section-title">Resume — Muhammad Abdullah</h2>
+                <div class="title-divider"></div>
+            </div>
+
+            <div class="resume-grid" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+                <div class="glass-panel" style="padding:1.25rem;">
+                    <h3 class="gold-gradient-text">Profile</h3>
+                    <p>Software Engineer with strong foundations in C++ and Python. Experienced in building performant systems, Computer Network, and database design.</p>
+
+                    <h3 class="gold-gradient-text">Education</h3>
+                    <ul class="resume-list">
+                        <li>
+                            <strong>Software Engineer</strong> 
+                            <p>Bachelor of Science — Software Engineering | University of Engineering & Technology (UET), Lahore – Present | Lahore, Pakistan
+▸                           	Currently enrolled in 3rd semester; relevant coursework in Data Structures, OOP, Computer Networks, and Discrete Mathematics, database
+▸	                             Actively developing projects and building skills alongside academic studies
+                                  </p>
+                        </li>
+                        <li>
+                            <strong>Certificate</strong> (GOOGLE / COURSERA)
+                            <p>2 professional certificates completed on Google Career Certificates via Coursera. Full details on the LinkedIn profile.
+                             <i> Programming for Everybody (Getting Started with Python) — Google / Coursera	2025</i>
+                            <li> Google AI Essentials — Google / Coursera</li>
+                            </p>
+                        
+                     </li>
+                    </ul>
+
+                    <h3 class="gold-gradient-text">Education</h3>
+                    <p><strong>B.S. in Computer Science</strong> — University Name</p>
+
+                    <h3 class="gold-gradient-text">Skills</h3>
+                    <p>C++, Python, SQL,Computer Network, Algorithms, System Design, HTML/CSS/JS</p>
+
+                    <h3 class="gold-gradient-text">Projects</h3>
+                    <ul class="resume-list">
+                        <li><strong>Python Chat Application</strong> — Real-time monitoring and analytics.</li>
+                        <li><strong>Console-Based C++ Project</strong> — Performance-oriented booking engine in C++.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top:1.25rem;">
+                <a href="Resume.docx" download class="btn btn-primary btn-hover-effect">
+                    <i class="fa-solid fa-download" style="margin-right:.5rem;"></i>
+                    <span>Download Resume</span>
+                </a>
+                <a href="index.html#contact" class="btn btn-secondary btn-hover-effect" style="margin-left:1rem;">
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (reuse) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Muhammad Abdullah. All Rights Reserved.</p>
+            <div class="footer-quick-contact">
+                <a href="tel:+923476978772" class="footer-contact-link" aria-label="Phone"><i data-lucide="phone"></i></a>
+                <a href="mailto:abdullahasadullah776@gmail.com" class="footer-contact-link" aria-label="Email"><i data-lucide="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
